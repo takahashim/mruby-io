@@ -2,7 +2,7 @@
 # FileTest
 
 assert('FileTest TEST SETUP') do
-  MRubyIOTestUtil.io_test_setup
+  MRubyIOTestUtil.file_test_setup
 end
 
 assert("FileTest.directory?") do
@@ -91,5 +91,5 @@ assert("FileTest.zero?") do
 end
 
 assert('FileTest TEST CLEANUP') do
-  assert_nil MRubyIOTestUtil.io_test_cleanup
+  assert_nil MRubyIOTestUtil.file_test_cleanup
 end
