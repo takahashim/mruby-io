@@ -6,7 +6,6 @@ environment:
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - set PATH=C:\MinGW\bin;C:\MinGW\msys\1.0\bin;%PATH%
-  - set CC=gcc
   - ruby --version
   - gem --version
   - gcc --version
