@@ -16,7 +16,7 @@ if __FILE__ == $0
 end
 
 MRuby::Build.new do |conf|
-  toolchain :gcc
+  toolchain :visualcpp
   conf.gembox 'default'
 
   conf.gem :git => 'https://github.com/iij/mruby-env.git'
