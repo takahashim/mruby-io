@@ -18,6 +18,15 @@
 #include "mruby/string.h"
 #include "mruby/variable.h"
 
+#if defined(_WIN32) || defined(_WIN64)
+#ifndef mode_t
+#define mode_t int
+#endif
+#ifndef mkstemp
+#define mkstemp mktemp
+#endif
+#endif
+
 static mrb_value
 mrb_io_test_io_setup(mrb_state *mrb, mrb_value self)
 {
