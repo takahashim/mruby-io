@@ -19,10 +19,8 @@
 #include "mruby/variable.h"
 
 #if defined(_WIN32) || defined(_WIN64)
-#ifndef mode_t
+#ifdef _MSC_VER
 #define mode_t int
-#endif
-#ifndef mkstemp
 #define mkstemp mktemp
 #endif
 #endif
