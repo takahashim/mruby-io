@@ -1,11 +1,17 @@
 ---
 version: "#{build}"
 environment:
-  MRUBY_CONFIG: "C:/projects/mruby-io/run_test.rb"
+  VisualStudioVersion: "12.0"
+  matrix:
+    - MRUBY_CONFIG: "C:/projects/mruby-io/run_test.rb"
+    - MRUBY_CONFIG: "C:/projects/mruby-io/run_test_vs.rb"
+
+init:
+  - call "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %platform%
 
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
-  - set PATH=C:\MinGW\bin;C:\MinGW\msys\1.0\bin;%PATH%
+  - set PATH=%PATH%;C:\MinGW\bin;C:\MinGW\msys\1.0\bin
   - set CC=gcc
   - ruby --version
   - gem --version
