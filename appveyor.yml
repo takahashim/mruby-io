@@ -12,7 +12,6 @@ init:
 install:
   - SET PATH=C:\Ruby%ruby_version%\bin;%PATH%
   - set PATH=%PATH%;C:\MinGW\bin;C:\MinGW\msys\1.0\bin
-  - set CC=gcc
   - ruby --version
   - gem --version
   - gcc --version
